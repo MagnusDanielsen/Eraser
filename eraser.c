@@ -1,6 +1,7 @@
 //ERASER.c
 //MADE BY ARTEON!
 //ERASE EVERYTHING ON YOUR HARDRIVE
+//LAST EDIT 20:48 18.02.19
 
 #include <stdio.h>
 #include <stdlib.h>
